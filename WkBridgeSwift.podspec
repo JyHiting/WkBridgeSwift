@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WkBridgeSwift'
-  s.version          = '0.0.3'
+  s.version          = '0.0.5'
   s.summary          = '简化wkwebview和前端通信交互的框架'
   s.description      = <<-DESC
   一个swift版本的简化wkwebview和前端通信交互的框架

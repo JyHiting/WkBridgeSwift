@@ -38,42 +38,39 @@
     // js调用iOS提供的服务示例代码
     function jscalliosfunc0() {
         //dotask1不接受参数
-        invokeiOSService('dotask1')
+        WkBridgeSwift.invokeiOSService('dotask1')
     }
     function jscalliosfunc1() {
-        // invokeiOSService('dotask2', "字符串参数")
-        // invokeiOSService('dotask2', 10086)
-        // invokeiOSService('dotask2', [10086, 10087, "字符串"])
-        invokeiOSService('dotask2', { name: "jackchen", age: 10086, date: Date() })
+        WkBridgeSwift.invokeiOSService('dotask2', { name: "jackchen", age: 10086, date: Date() })
     }
     function jscalliosfunc2() {
-        invokeiOSService('dotask3', { name: "jackchen", age: 10086, date: Date() }, function (res) {
+        WkBridgeSwift.invokeiOSService('dotask3', { name: "jackchen", age: 10086, date: Date() }, function (res) {
             alert(JSON.stringify(res))
         })
     }
     //注册js服务方法提供给iOS调用
     //注册无参数服务
-    registerJsService('jsservice1', function () {
+    WkBridgeSwift.registerJsService('jsservice1', function () {
         alert("jsservice1")
     })
     //注册有参数无回调
-    registerJsService('jsservice2', function (paras) {
+    WkBridgeSwift.registerJsService('jsservice2', function (paras) {
         alert("jsservice2")
     })
     //注册有参数且需要回调的服务
-    registerJsService('jsservice3', function (paras, callback) {
+    WkBridgeSwift.registerJsService('jsservice3', function (paras, callback) {
         alert("jsservice3")
         //to dosomething
         //and then callback
         callback({ name: "jyhiting", age: "10086", height: 180 })
     })
 
-    registerJsService('alertInfo', function (infos) {
+    WkBridgeSwift.registerJsService('alertInfo', function (infos) {
         alert(JSON.stringify(infos))
     })
 
     function dismissSelf() {
-        invokeiOSService("dismissSelf")
+        WkBridgeSwift.invokeiOSService("dismissSelf")
     }
 
 </script>

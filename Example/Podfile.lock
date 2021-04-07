@@ -1,5 +1,5 @@
 PODS:
-  - WkBridgeSwift (0.0.3)
+  - WkBridgeSwift (0.0.5)
 
 DEPENDENCIES:
   - WkBridgeSwift (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  WkBridgeSwift: 8161787222cd28c4ec08a5485d8d1a91b84df07c
+  WkBridgeSwift: 2200d8f95fc7f2287db6ddb14dbce7d454ce2769
 
 PODFILE CHECKSUM: b1af4de34775178474bb24222a5659f5ad0f6bf7
 
