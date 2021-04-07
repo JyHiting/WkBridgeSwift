@@ -63,7 +63,7 @@ bridge?.register(handler: "dotask3", doSomething: { (paras, cb:WkBridgeResponseC
 
 ```
 //注册无参数无回调服务
-registerJsService('jsservice1', function () {
+WkBridgeSwift.registerJsService('jsservice1', function () {
 
 })
 ```
@@ -72,7 +72,7 @@ registerJsService('jsservice1', function () {
 
 ```
 //注册有参数无回调
-registerJsService('jsservice2', function (paras) {
+WkBridgeSwift.registerJsService('jsservice2', function (paras) {
 
 })
 ```
@@ -80,7 +80,7 @@ registerJsService('jsservice2', function (paras) {
 有时候我们想在 js 端注册一些方法让 iOS 端调用同时接受一些 iOS 端传入的信息，且在 js 端处理完毕之后回调一些信息给 iOS 端的时候，那么就在 js 端注册有参数且需要回调的服务
 
 ```
-registerJsService('jsservice3', function (paras, callback) {
+WkBridgeSwift.registerJsService('jsservice3', function (paras, callback) {
 
 })
 ```
