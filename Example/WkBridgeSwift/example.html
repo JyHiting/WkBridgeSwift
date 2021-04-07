@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WkBridgeSwift示例代码</title>
+    <style type="text/css">
+        .container {
+            background-color: lightgray;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .title {
+            background-color: yellow;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">WkBridgeSwift示例代码</div>
+        <button onclick="jscalliosfunc0()">js调用iOS方法，不带参数，仅仅执行</button>
+        <button onclick="jscalliosfunc1()">js调用iOS方法，仅带参数无回调，不需要反馈</button>
+        <button onclick="jscalliosfunc2()">js调用iOS方法，带参数有回调，需要反馈</button>
+        <!-- iOS调用js提供的服务示例代码 -->
+        <button onclick="jscalliosfunc0()">js调用iOS方法，不带参数，仅仅执行</button>
+
+        <button onclick="dismissSelf()">dismissSelf</button>
+    </div>
+</body>
+<script>
+    // js调用iOS提供的服务示例代码
+    function jscalliosfunc0() {
+        //dotask1不接受参数
+        invokeiOSService('dotask1')
+    }
+    function jscalliosfunc1() {
+        // invokeiOSService('dotask2', "字符串参数")
+        // invokeiOSService('dotask2', 10086)
+        // invokeiOSService('dotask2', [10086, 10087, "字符串"])
+        invokeiOSService('dotask2', { name: "jackchen", age: 10086, date: Date() })
+    }
+    function jscalliosfunc2() {
+        invokeiOSService('dotask3', { name: "jackchen", age: 10086, date: Date() }, function (res) {
+            alert(JSON.stringify(res))
+        })
+    }
+    //注册js服务方法提供给iOS调用
+    //注册无参数服务
+    registerJsService('jsservice1', function () {
+        alert("jsservice1")
+    })
+    //注册有参数无回调
+    registerJsService('jsservice2', function (paras) {
+        alert("jsservice2")
+    })
+    //注册有参数且需要回调的服务
+    registerJsService('jsservice3', function (paras, callback) {
+        alert("jsservice3")
+        //to dosomething
+        //and then callback
+        callback({ name: "jyhiting", age: "10086", height: 180 })
+    })
+
+    registerJsService('alertInfo', function (infos) {
+        alert(JSON.stringify(infos))
+    })
+
+    function dismissSelf() {
+        invokeiOSService("dismissSelf")
+    }
+
+</script>
+
+</html>

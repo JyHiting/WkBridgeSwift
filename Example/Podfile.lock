@@ -1,0 +1,16 @@
+PODS:
+  - WkBridgeSwift (0.0.3)
+
+DEPENDENCIES:
+  - WkBridgeSwift (from `../`)
+
+EXTERNAL SOURCES:
+  WkBridgeSwift:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  WkBridgeSwift: 8161787222cd28c4ec08a5485d8d1a91b84df07c
+
+PODFILE CHECKSUM: b1af4de34775178474bb24222a5659f5ad0f6bf7
+
+COCOAPODS: 1.10.1

@@ -1,0 +1,23 @@
+{
+  "name": "WkBridgeSwift",
+  "version": "0.0.3",
+  "summary": "A short description of WkBridgeSwift.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/1575792978@qq.com/WkBridgeSwift",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "1575792978@qq.com": "1575792978@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/1575792978@qq.com/WkBridgeSwift.git",
+    "tag": "0.0.3"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "Source/*.swift",
+  "frameworks": "WebKit"
+}
