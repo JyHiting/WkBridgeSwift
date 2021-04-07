@@ -3,7 +3,9 @@ use_frameworks!
 platform :ios, '9.0'
 
 target 'WkBridgeSwift_Example' do
-  pod 'WkBridgeSwift', :path => '../'
+  
+  pod 'WkBridgeSwift','0.0.6'
+#  pod 'WkBridgeSwift', :path => '../'
 
   target 'WkBridgeSwift_Tests' do
     inherit! :search_paths

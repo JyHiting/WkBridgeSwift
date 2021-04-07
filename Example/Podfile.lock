@@ -1,16 +1,16 @@
 PODS:
-  - WkBridgeSwift (0.0.5)
+  - WkBridgeSwift (0.0.3)
 
 DEPENDENCIES:
-  - WkBridgeSwift (from `../`)
+  - WkBridgeSwift
 
-EXTERNAL SOURCES:
-  WkBridgeSwift:
-    :path: "../"
+SPEC REPOS:
+  trunk:
+    - WkBridgeSwift
 
 SPEC CHECKSUMS:
-  WkBridgeSwift: 2200d8f95fc7f2287db6ddb14dbce7d454ce2769
+  WkBridgeSwift: 5c40589b0bd03b1e1a1a3994f15b94088101a9e5
 
-PODFILE CHECKSUM: b1af4de34775178474bb24222a5659f5ad0f6bf7
+PODFILE CHECKSUM: 52c894c3440d23ba0f62485911469754d9cb5f2b
 
 COCOAPODS: 1.10.1

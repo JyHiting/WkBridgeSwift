@@ -8,31 +8,31 @@
 
 /* Begin PBXBuildFile section */
 		130776491CBF666DC5CBD0C2781F21F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D20E8E61FE391C0ED97D6F5A9EEEFD /* Foundation.framework */; };
-		36112ED7A138BFC4F4EB49F8BB1E8980 /* WkWebJsBridgeLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E53BDCFAB8627883894B7789BE474A /* WkWebJsBridgeLog.swift */; };
+		36112ED7A138BFC4F4EB49F8BB1E8980 /* WkWebJsBridgeLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = A42488E5E56E276E5C80380CB9B30B7B /* WkWebJsBridgeLog.swift */; };
 		6BFD2B6A0733A1FC8BEF62192BD6E2E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D20E8E61FE391C0ED97D6F5A9EEEFD /* Foundation.framework */; };
-		75F46C30E69843013120AFD8B9DA095A /* WkBridgeSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DDC22A50B553F52FE48F2BDA094395B /* WkBridgeSwift-dummy.m */; };
+		75F46C30E69843013120AFD8B9DA095A /* WkBridgeSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F02BED94E1B9756BEEC9ACA9741849E /* WkBridgeSwift-dummy.m */; };
 		7EB2A2AB80352CEEA7A674DD5679344C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32D20E8E61FE391C0ED97D6F5A9EEEFD /* Foundation.framework */; };
 		955882F8E9D9A0FABD57CC9ECBA5F108 /* Pods-WkBridgeSwift_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B707401907070553B76BD0D1904F27B /* Pods-WkBridgeSwift_Tests-dummy.m */; };
 		C3F71FD517216F4933C9E75201CF0787 /* Pods-WkBridgeSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ACBD829F6AE51FDA932D93A65921DCA1 /* Pods-WkBridgeSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D3EE8BD01DC190CE680DE89078C65688 /* Pods-WkBridgeSwift_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FEA05E00168E50BDB6AFBB5130F8512E /* Pods-WkBridgeSwift_Example-dummy.m */; };
 		D45D94E1C138552F000AB96296CE3017 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BB655F8A3B9F0C3DB37D349580B2779 /* WebKit.framework */; };
-		D6A8CD33C6B80E92B0C6E5DDA624FF55 /* WkBridgeSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E5376CAF11EBD03CF2EB74129602410D /* WkBridgeSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6A8CD33C6B80E92B0C6E5DDA624FF55 /* WkBridgeSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 467A3E35C76A7D55EDAFEC12324394E8 /* WkBridgeSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D7BE39F383526D35A93FA994CEB7FF11 /* Pods-WkBridgeSwift_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0DEF94F214B18C2F2CBFA64BAB5AD50A /* Pods-WkBridgeSwift_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E3D19D4B7DD2F6824847B6B5871647AE /* WkWebHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8361EED47DBC31433AECC995CF15C854 /* WkWebHandlerProtocol.swift */; };
-		E4C76FC4C32C0E2E2CD7C646EBFB3ECB /* WkWebJsBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 606A0261839D74A0D12D0AAF0140DD64 /* WkWebJsBridge.swift */; };
-		ECC5B849B48DD2A6326FCFA4AC6D9CED /* WkWebHandlerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D3D9BD8184E38D5C9C3D0E9B405461 /* WkWebHandlerProxy.swift */; };
-		FA5B15E58B6B4C3384D4D07AF8150CC0 /* WkWebInjectedJs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7CB71D01A105CA120206F78CFB8B4E3 /* WkWebInjectedJs.swift */; };
+		E3D19D4B7DD2F6824847B6B5871647AE /* WkWebHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BAFDA4F8CA260C81B57F5768FB8309 /* WkWebHandlerProtocol.swift */; };
+		E4C76FC4C32C0E2E2CD7C646EBFB3ECB /* WkWebJsBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80407A1991ED7501795CD933DF6A7DEA /* WkWebJsBridge.swift */; };
+		ECC5B849B48DD2A6326FCFA4AC6D9CED /* WkWebHandlerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DE5058831E366EE80538C67C59F2E2 /* WkWebHandlerProxy.swift */; };
+		FA5B15E58B6B4C3384D4D07AF8150CC0 /* WkWebInjectedJs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB27AE7623516C62673926C0C6EDEA1 /* WkWebInjectedJs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B5D91198A8DC725415C83946D8AEC8CD /* PBXContainerItemProxy */ = {
+		B0448A5DB70F525D66B8AB3548DFF8C5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 429FB94468EFBE4B2223FE4D7D257799;
 			remoteInfo = "Pods-WkBridgeSwift_Example";
 		};
-		EC59A3F6F0BAA1867130CEAEF570EA82 /* PBXContainerItemProxy */ = {
+		D0D11B2832944F995E6F3C6385BBAB6F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -42,43 +42,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0118603A39D8F9508F56150F2C5189D0 /* WkBridgeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WkBridgeSwift.modulemap; sourceTree = "<group>"; };
 		0DEF94F214B18C2F2CBFA64BAB5AD50A /* Pods-WkBridgeSwift_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WkBridgeSwift_Example-umbrella.h"; sourceTree = "<group>"; };
 		0FE25199E37B09491BCA8B99798EE86A /* Pods-WkBridgeSwift_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WkBridgeSwift_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		122FBB456DF5C8B70807DF9D46430D00 /* WkBridgeSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WkBridgeSwift.debug.xcconfig; sourceTree = "<group>"; };
 		132C84D70BB835C043189C478DFAB176 /* Pods-WkBridgeSwift_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WkBridgeSwift_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		255AD802DA075836050D8414FBABA391 /* Pods-WkBridgeSwift_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WkBridgeSwift_Example.release.xcconfig"; sourceTree = "<group>"; };
-		2686D1E1AEC9E572C2ED58DEACC704BF /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		2816BA1AEF7ABC9D67AA3C1B1F261EB5 /* WkBridgeSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WkBridgeSwift.release.xcconfig; sourceTree = "<group>"; };
-		286E7A12E7D2BEA8A2ED234C70AD37D1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		2BB655F8A3B9F0C3DB37D349580B2779 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
 		32D20E8E61FE391C0ED97D6F5A9EEEFD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		51E53BDCFAB8627883894B7789BE474A /* WkWebJsBridgeLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WkWebJsBridgeLog.swift; path = Source/WkWebJsBridgeLog.swift; sourceTree = "<group>"; };
-		606A0261839D74A0D12D0AAF0140DD64 /* WkWebJsBridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WkWebJsBridge.swift; path = Source/WkWebJsBridge.swift; sourceTree = "<group>"; };
+		467A3E35C76A7D55EDAFEC12324394E8 /* WkBridgeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WkBridgeSwift-umbrella.h"; sourceTree = "<group>"; };
+		4F02BED94E1B9756BEEC9ACA9741849E /* WkBridgeSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WkBridgeSwift-dummy.m"; sourceTree = "<group>"; };
+		5AB27AE7623516C62673926C0C6EDEA1 /* WkWebInjectedJs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WkWebInjectedJs.swift; path = Source/WkWebInjectedJs.swift; sourceTree = "<group>"; };
 		6EFA40315AEA126CC0326071C23FC567 /* Pods-WkBridgeSwift_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WkBridgeSwift_Tests.modulemap"; sourceTree = "<group>"; };
 		74C4965DCAF677B234EA9CCE5E7CA932 /* Pods_WkBridgeSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WkBridgeSwift_Tests.framework; path = "Pods-WkBridgeSwift_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		78E81E41F84CABB3E6404664A712E84A /* WkBridgeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WkBridgeSwift-prefix.pch"; sourceTree = "<group>"; };
+		77DE5058831E366EE80538C67C59F2E2 /* WkWebHandlerProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WkWebHandlerProxy.swift; path = Source/WkWebHandlerProxy.swift; sourceTree = "<group>"; };
 		7B707401907070553B76BD0D1904F27B /* Pods-WkBridgeSwift_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WkBridgeSwift_Tests-dummy.m"; sourceTree = "<group>"; };
 		8006B57DEEAFC723DFA737C8E12C796A /* Pods-WkBridgeSwift_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WkBridgeSwift_Example-Info.plist"; sourceTree = "<group>"; };
-		8361EED47DBC31433AECC995CF15C854 /* WkWebHandlerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WkWebHandlerProtocol.swift; path = Source/WkWebHandlerProtocol.swift; sourceTree = "<group>"; };
-		8DDC22A50B553F52FE48F2BDA094395B /* WkBridgeSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WkBridgeSwift-dummy.m"; sourceTree = "<group>"; };
-		90B62C23F32B82F85DA1EB31B9E6C740 /* WkBridgeSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WkBridgeSwift-Info.plist"; sourceTree = "<group>"; };
+		80407A1991ED7501795CD933DF6A7DEA /* WkWebJsBridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WkWebJsBridge.swift; path = Source/WkWebJsBridge.swift; sourceTree = "<group>"; };
 		92081A592F4B03881F8BD9CE53491BB1 /* Pods-WkBridgeSwift_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WkBridgeSwift_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		94BAFDA4F8CA260C81B57F5768FB8309 /* WkWebHandlerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WkWebHandlerProtocol.swift; path = Source/WkWebHandlerProtocol.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A17EE1A7EA8A495BF4BDA52D0282D9BC /* WkBridgeSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WkBridgeSwift-prefix.pch"; sourceTree = "<group>"; };
+		A42488E5E56E276E5C80380CB9B30B7B /* WkWebJsBridgeLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WkWebJsBridgeLog.swift; path = Source/WkWebJsBridgeLog.swift; sourceTree = "<group>"; };
+		A7D060FAB66CF85AEE077900616F7CB3 /* WkBridgeSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WkBridgeSwift.release.xcconfig; sourceTree = "<group>"; };
 		ACBD829F6AE51FDA932D93A65921DCA1 /* Pods-WkBridgeSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WkBridgeSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
 		AF728F7876970A5ED0C91B4F0C3608FD /* Pods-WkBridgeSwift_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-WkBridgeSwift_Example-frameworks.sh"; sourceTree = "<group>"; };
 		B5AC40516108153DBFD5B990BD2D8F72 /* Pods-WkBridgeSwift_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WkBridgeSwift_Tests-Info.plist"; sourceTree = "<group>"; };
 		B8C3FB9250FEC1BA20EFC09D0A1B3D21 /* WkBridgeSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WkBridgeSwift.framework; path = WkBridgeSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C7CB71D01A105CA120206F78CFB8B4E3 /* WkWebInjectedJs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WkWebInjectedJs.swift; path = Source/WkWebInjectedJs.swift; sourceTree = "<group>"; };
+		CBEE28DD9CC52E1366B8D459B44980F6 /* WkBridgeSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WkBridgeSwift-Info.plist"; sourceTree = "<group>"; };
 		D0A62A860CC5359665F20CC318D83614 /* Pods-WkBridgeSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WkBridgeSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D14F538BE8FD6D86122E05C676DEAEB3 /* WkBridgeSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WkBridgeSwift.modulemap; sourceTree = "<group>"; };
 		D8F99FE0E206F83DCE7CD7A886609069 /* Pods-WkBridgeSwift_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-WkBridgeSwift_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		DF98CF4B22B89E61B2D6D79B6FAB7C87 /* Pods_WkBridgeSwift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WkBridgeSwift_Example.framework; path = "Pods-WkBridgeSwift_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E064A31F5009EB50CEA1650D9A493AED /* Pods-WkBridgeSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WkBridgeSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		E0D3D9BD8184E38D5C9C3D0E9B405461 /* WkWebHandlerProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WkWebHandlerProxy.swift; path = Source/WkWebHandlerProxy.swift; sourceTree = "<group>"; };
-		E5376CAF11EBD03CF2EB74129602410D /* WkBridgeSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WkBridgeSwift-umbrella.h"; sourceTree = "<group>"; };
-		E9807AD127B75A2445CD577E4E6218C7 /* WkBridgeSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WkBridgeSwift.debug.xcconfig; sourceTree = "<group>"; };
 		E9AED864C90DBA2C7EAFFFA755210961 /* Pods-WkBridgeSwift_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-WkBridgeSwift_Example.modulemap"; sourceTree = "<group>"; };
 		EC86507E5565A6AF396F9249E4419532 /* Pods-WkBridgeSwift_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WkBridgeSwift_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		F77366A225D4310DA4D430DBAF7B3A96 /* WkBridgeSwift.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = WkBridgeSwift.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		FEA05E00168E50BDB6AFBB5130F8512E /* Pods-WkBridgeSwift_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-WkBridgeSwift_Example-dummy.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,21 +116,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		174666519DB6B7E24173C1EC6E741E75 /* WkBridgeSwift */ = {
-			isa = PBXGroup;
-			children = (
-				8361EED47DBC31433AECC995CF15C854 /* WkWebHandlerProtocol.swift */,
-				E0D3D9BD8184E38D5C9C3D0E9B405461 /* WkWebHandlerProxy.swift */,
-				C7CB71D01A105CA120206F78CFB8B4E3 /* WkWebInjectedJs.swift */,
-				606A0261839D74A0D12D0AAF0140DD64 /* WkWebJsBridge.swift */,
-				51E53BDCFAB8627883894B7789BE474A /* WkWebJsBridgeLog.swift */,
-				C696B890A09ED6023430718CD053141B /* Pod */,
-				50BF15BAD592D6992EA072D48D3BD794 /* Support Files */,
-			);
-			name = WkBridgeSwift;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		36BBD1EC65FEC13D82309EAFD198D163 /* Pods-WkBridgeSwift_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,29 +131,6 @@
 			);
 			name = "Pods-WkBridgeSwift_Example";
 			path = "Target Support Files/Pods-WkBridgeSwift_Example";
-			sourceTree = "<group>";
-		};
-		442A9D9F39A53258980A10303A36E096 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				174666519DB6B7E24173C1EC6E741E75 /* WkBridgeSwift */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		50BF15BAD592D6992EA072D48D3BD794 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D14F538BE8FD6D86122E05C676DEAEB3 /* WkBridgeSwift.modulemap */,
-				8DDC22A50B553F52FE48F2BDA094395B /* WkBridgeSwift-dummy.m */,
-				90B62C23F32B82F85DA1EB31B9E6C740 /* WkBridgeSwift-Info.plist */,
-				78E81E41F84CABB3E6404664A712E84A /* WkBridgeSwift-prefix.pch */,
-				E5376CAF11EBD03CF2EB74129602410D /* WkBridgeSwift-umbrella.h */,
-				E9807AD127B75A2445CD577E4E6218C7 /* WkBridgeSwift.debug.xcconfig */,
-				2816BA1AEF7ABC9D67AA3C1B1F261EB5 /* WkBridgeSwift.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/WkBridgeSwift";
 			sourceTree = "<group>";
 		};
 		58579B8803B59EF725F53E37BF110DCF /* Targets Support Files */ = {
@@ -209,22 +168,12 @@
 			path = "Target Support Files/Pods-WkBridgeSwift_Tests";
 			sourceTree = "<group>";
 		};
-		C696B890A09ED6023430718CD053141B /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				286E7A12E7D2BEA8A2ED234C70AD37D1 /* LICENSE */,
-				2686D1E1AEC9E572C2ED58DEACC704BF /* README.md */,
-				F77366A225D4310DA4D430DBAF7B3A96 /* WkBridgeSwift.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				442A9D9F39A53258980A10303A36E096 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				D89B1FBECFBABAE7937FF33414875007 /* Pods */,
 				9F232C91DB7172E9AB332294D3BCFC89 /* Products */,
 				58579B8803B59EF725F53E37BF110DCF /* Targets Support Files */,
 			);
@@ -237,6 +186,43 @@
 				2BB655F8A3B9F0C3DB37D349580B2779 /* WebKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		D89B1FBECFBABAE7937FF33414875007 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF9911F5B109725491639F95786B52ED /* WkBridgeSwift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DCA92ACBF63480B33596897A8F0F0E95 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0118603A39D8F9508F56150F2C5189D0 /* WkBridgeSwift.modulemap */,
+				4F02BED94E1B9756BEEC9ACA9741849E /* WkBridgeSwift-dummy.m */,
+				CBEE28DD9CC52E1366B8D459B44980F6 /* WkBridgeSwift-Info.plist */,
+				A17EE1A7EA8A495BF4BDA52D0282D9BC /* WkBridgeSwift-prefix.pch */,
+				467A3E35C76A7D55EDAFEC12324394E8 /* WkBridgeSwift-umbrella.h */,
+				122FBB456DF5C8B70807DF9D46430D00 /* WkBridgeSwift.debug.xcconfig */,
+				A7D060FAB66CF85AEE077900616F7CB3 /* WkBridgeSwift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/WkBridgeSwift";
+			sourceTree = "<group>";
+		};
+		DF9911F5B109725491639F95786B52ED /* WkBridgeSwift */ = {
+			isa = PBXGroup;
+			children = (
+				94BAFDA4F8CA260C81B57F5768FB8309 /* WkWebHandlerProtocol.swift */,
+				77DE5058831E366EE80538C67C59F2E2 /* WkWebHandlerProxy.swift */,
+				5AB27AE7623516C62673926C0C6EDEA1 /* WkWebInjectedJs.swift */,
+				80407A1991ED7501795CD933DF6A7DEA /* WkWebJsBridge.swift */,
+				A42488E5E56E276E5C80380CB9B30B7B /* WkWebJsBridgeLog.swift */,
+				DCA92ACBF63480B33596897A8F0F0E95 /* Support Files */,
+			);
+			name = WkBridgeSwift;
+			path = WkBridgeSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +267,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				2523345F8FB39A4B6B5D6EF0ABC975D7 /* PBXTargetDependency */,
+				FD3E71D748A8E8E582D5B5065B6A4CD0 /* PBXTargetDependency */,
 			);
 			name = "Pods-WkBridgeSwift_Tests";
 			productName = "Pods-WkBridgeSwift_Tests";
@@ -300,7 +286,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				38AC40189A1F032DB47A5B785979D0AA /* PBXTargetDependency */,
+				9452B38583750B41A2B8355FA9D9273B /* PBXTargetDependency */,
 			);
 			name = "Pods-WkBridgeSwift_Example";
 			productName = "Pods-WkBridgeSwift_Example";
@@ -411,17 +397,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2523345F8FB39A4B6B5D6EF0ABC975D7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-WkBridgeSwift_Example";
-			target = 429FB94468EFBE4B2223FE4D7D257799 /* Pods-WkBridgeSwift_Example */;
-			targetProxy = B5D91198A8DC725415C83946D8AEC8CD /* PBXContainerItemProxy */;
-		};
-		38AC40189A1F032DB47A5B785979D0AA /* PBXTargetDependency */ = {
+		9452B38583750B41A2B8355FA9D9273B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = WkBridgeSwift;
 			target = 888D699E2145AD7B1D52D1A9F2CC14F9 /* WkBridgeSwift */;
-			targetProxy = EC59A3F6F0BAA1867130CEAEF570EA82 /* PBXContainerItemProxy */;
+			targetProxy = D0D11B2832944F995E6F3C6385BBAB6F /* PBXContainerItemProxy */;
+		};
+		FD3E71D748A8E8E582D5B5065B6A4CD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-WkBridgeSwift_Example";
+			target = 429FB94468EFBE4B2223FE4D7D257799 /* Pods-WkBridgeSwift_Example */;
+			targetProxy = B0448A5DB70F525D66B8AB3548DFF8C5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -527,7 +513,7 @@
 		};
 		66918A769A2915A7A6799D5A81B45143 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2816BA1AEF7ABC9D67AA3C1B1F261EB5 /* WkBridgeSwift.release.xcconfig */;
+			baseConfigurationReference = A7D060FAB66CF85AEE077900616F7CB3 /* WkBridgeSwift.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -655,7 +641,7 @@
 		};
 		AEEBF7ED76E7C5AFDEC1EC3A00A24623 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9807AD127B75A2445CD577E4E6218C7 /* WkBridgeSwift.debug.xcconfig */;
+			baseConfigurationReference = 122FBB456DF5C8B70807DF9D46430D00 /* WkBridgeSwift.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
