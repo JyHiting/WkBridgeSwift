@@ -1,15 +1,8 @@
 # WkBridgeSwift
 
-[![CI Status](https://img.shields.io/travis/1575792978@qq.com/WkBridgeSwift.svg?style=flat)](https://travis-ci.org/1575792978@qq.com/WkBridgeSwift)
-[![Version](https://img.shields.io/cocoapods/v/WkBridgeSwift.svg?style=flat)](https://cocoapods.org/pods/WkBridgeSwift)
-[![License](https://img.shields.io/cocoapods/l/WkBridgeSwift.svg?style=flat)](https://cocoapods.org/pods/WkBridgeSwift)
-[![Platform](https://img.shields.io/cocoapods/p/WkBridgeSwift.svg?style=flat)](https://cocoapods.org/pods/WkBridgeSwift)
+## 说明
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
+这是一个简化 WkWebview 和 Web 前端交互通信的框架
 
 ## 安装
 
