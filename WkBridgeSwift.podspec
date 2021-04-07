@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.homepage         = 'https://github.com/1575792978@qq.com/WkBridgeSwift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'JyHiting' => '1575792978@qq.com' }
-  s.source           = { :git => 'https://github.com/1575792978@qq.com/WkBridgeSwift.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/JyHiting/WkBridgeSwift.git', :tag => s.version.to_s }
   s.ios.deployment_target = '9.0'
   s.source_files = 'Source/*.swift'
   s.frameworks = 'WebKit'
