@@ -57,6 +57,19 @@ class WebViewExample: UIViewController {
             })
             
         }
+        
+        //MARK:-- post body丢失问题默认已经处理，该bridge会自动处理body丢失问题
+//        var req = URLRequest(url: URL(string: "http://10.68.252.191:3000/wkissues/postapi")!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 30)
+//        req.httpMethod = "post"
+//        let paras:[String:Any] = ["name":"jack","age":88]
+//        req.httpBody = try? JSONSerialization.data(withJSONObject: paras, options: [])
+//        wkWebView?.load(req)
+        
+        //MARK:-- 加载普通url
+//        let req = URLRequest(url: URL(string: "https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form")!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 30)
+//        wkWebView?.load(req)
+        
+        //MARK:-- 使用示例代码
         let exampleHtml = URL(fileURLWithPath: Bundle.main.path(forResource: "example", ofType: "html")!)
         wkWebView?.load(URLRequest(url: exampleHtml))
         //iOS调用js挂载服务示例代码
@@ -90,8 +103,7 @@ class WebViewExample: UIViewController {
         print("WebViewExample deinit")
     }
 }
-
-//自己原有项目可以通过沿用老的继续使用和bridge不冲突
+//MARK:--自己原有项目可以通过沿用老的继续使用和bridge不冲突
 extension WebViewExample:WKScriptMessageHandler{
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         

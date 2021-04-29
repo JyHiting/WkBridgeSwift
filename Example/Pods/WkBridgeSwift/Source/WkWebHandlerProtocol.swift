@@ -10,7 +10,7 @@ public typealias WkBridgeResponseCallback = (_ response:Any?)->()
 public typealias WkBridgeLogicalProcessingEntry = (_ paras:Any?,_ responseCallback:WkBridgeResponseCallback?)->Void
 
 protocol WkWebiOSHandlerProtocol {
-    
+
     static func doSomething(_ paras:Any?,_ responseCallback:WkBridgeResponseCallback?) -> Void
     
 }

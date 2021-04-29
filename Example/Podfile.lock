@@ -1,5 +1,5 @@
 PODS:
-  - WkBridgeSwift (0.0.3)
+  - WkBridgeSwift (0.0.5)
 
 DEPENDENCIES:
   - WkBridgeSwift
@@ -9,7 +9,7 @@ SPEC REPOS:
     - WkBridgeSwift
 
 SPEC CHECKSUMS:
-  WkBridgeSwift: 5c40589b0bd03b1e1a1a3994f15b94088101a9e5
+  WkBridgeSwift: 2200d8f95fc7f2287db6ddb14dbce7d454ce2769
 
 PODFILE CHECKSUM: 52c894c3440d23ba0f62485911469754d9cb5f2b
 

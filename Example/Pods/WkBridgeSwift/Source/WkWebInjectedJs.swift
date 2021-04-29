@@ -14,12 +14,12 @@ extension WkWebJsBridge{
         window._nativeServiceCallBackDispatcher = function (res, callbackId) {
             
             try {
-                const callbackInfo = window.hitingiOSService.callbacklist[callbackId];
+                const callbackInfo = window.WkBridgeSwift.callbacklist[callbackId];
                 if (callbackInfo) {
                     const scope = callbackInfo.scope;
                     const cb = callbackInfo.callback;
                     cb.bind(scope)(res);
-                    delete window.hitingiOSService.callbacklist[callbackId];
+                    delete window.WkBridgeSwift.callbacklist[callbackId];
                 }
             } catch (error) {
                 if (window.webkit) {
@@ -32,7 +32,7 @@ extension WkWebJsBridge{
         window._jsServiceCallBackDispatcher = function (paras, name, jsCallbackId) {
             
             try {
-                const serviceInfo = window.hitingiOSService.jsServices[name]
+                const serviceInfo = window.WkBridgeSwift.jsServices[name]
                 if (serviceInfo) {
                     const scope = serviceInfo.scope;
                     const service = serviceInfo.service;
@@ -66,8 +66,7 @@ extension WkWebJsBridge{
             }
 
         }
-        window.hitingiOSService = {
-
+        window.WkBridgeSwift = {
             invokeiOSService: function () {
                 
                 try {
@@ -85,9 +84,9 @@ extension WkWebJsBridge{
                         //api + paras + callback
                         message.$iOSApi = args.shift()
                         message.$iOSApiParas = args.shift()
-                        const _cbToken = window.hitingiOSService.generateCallbackId();
+                        const _cbToken = window.WkBridgeSwift.generateCallbackId();
                         message.$iOSApiCallbackId = _cbToken
-                        window.hitingiOSService.callbacklist[_cbToken] = {
+                        window.WkBridgeSwift.callbacklist[_cbToken] = {
                             scope: this,
                             callback: args.shift()
                         }
@@ -105,7 +104,7 @@ extension WkWebJsBridge{
                 }
             },
             registerJsService: function (name, service) {
-                window.hitingiOSService.jsServices[name] = {
+                window.WkBridgeSwift.jsServices[name] = {
                     scope: this,
                     service: service
                 }
@@ -120,8 +119,6 @@ extension WkWebJsBridge{
                 return uuid;
             }
         }
-        window.invokeiOSService = window.hitingiOSService.invokeiOSService
-        window.registerJsService = window.hitingiOSService.registerJsService
         }()
         """
         return js

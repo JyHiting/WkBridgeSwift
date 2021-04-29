@@ -15,6 +15,7 @@ public class WkWebJsBridge: NSObject {
     
     public static func bridgeFor(webView:WKWebView) -> WkWebJsBridge {
         
+        WKWebView.wkWebHook()
         let webBridge = WkWebJsBridge(wk: webView)
         let injectJs = _JsBridgeInjectJs()
         let handlerProxy = WkWebHandlerProxy(scriptDelegate: webBridge)
