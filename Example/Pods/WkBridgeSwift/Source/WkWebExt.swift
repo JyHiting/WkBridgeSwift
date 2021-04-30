@@ -8,7 +8,7 @@
 import WebKit
 
 extension WKWebView{
-        
+    
     class func wkWebHook() -> Void {
         DispatchQueue.doItOnce(token: "WKWebView_initializeMethod") {
             
@@ -53,7 +53,70 @@ extension WKWebView{
         }
         return wk_load(request)
     }
+    func wkTakeSnapshot(_ snapshot:((UIImage?)->())?) -> Void {
+        
+        DispatchQueue.main.async { [self] in
+
+            let mask = self.snapshotView(afterScreenUpdates: false)!
+            mask.frame = CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: mask.bounds.size.width, height: mask.bounds.size.height)
+            guard let _superview = self.superview else {
+                return
+            }
+            _superview.addSubview(mask)
+                        
+            let oldframe = self.frame
+            let oldOffset = self.scrollView.contentOffset
+            let contentSize = self.scrollView.contentSize
+            let screenCount = Int(ceilf(Float(contentSize.height/self.scrollView.bounds.size.height)))
+
+            self.frame = CGRect(origin: .zero, size: contentSize)
+            self.scrollView.contentOffset = .zero
+
+            UIGraphicsBeginImageContextWithOptions(contentSize, true, UIScreen.main.scale)
+            let content = UIGraphicsGetCurrentContext()
+            
+            self.scrollToDraw(idx: 0, max: Int(screenCount), content: content,superview:_superview) {
+ 
+                mask.removeFromSuperview()
+                _superview.addSubview(self)
+                
+                let snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
+                UIGraphicsEndImageContext();
+
+                self.frame = oldframe;
+                self.scrollView.contentOffset = oldOffset;
+
+                if let _snapshot = snapshot{
+                    _snapshot(snapshotImage)
+                }
+            }
+        }
+    }
     
+    private func scrollToDraw(idx:Int,max:Int,content:CGContext?,superview:UIView?,doTask:@escaping ()->()) -> Void {
+
+        guard let _superview = superview else {
+            return
+        }
+        var curIdx = idx
+        let _height = _superview.bounds.size.height
+
+        var myFrame = self.frame;
+        myFrame.origin.y = -(CGFloat((idx))*_height);
+        self.frame = myFrame;
+        
+        
+        DispatchQueue.main.async {
+            self.layer.render(in: content!)
+            if curIdx <= max{
+                curIdx += 1
+                self.scrollToDraw(idx: curIdx, max: max, content: content,superview: _superview, doTask: doTask)
+            }else{
+                doTask()
+            }
+        }
+
+    }
 }
 
 extension DispatchQueue{
@@ -82,3 +145,4 @@ extension DispatchQueue{
         
     }
 }
+

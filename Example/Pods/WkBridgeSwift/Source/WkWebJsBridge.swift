@@ -79,6 +79,18 @@ public class WkWebJsBridge: NSObject {
         _executeJsOnMain(js: jsStr)
     }
     
+    public func takeSnapshot(_ snapshot:((UIImage?)->())?)->Void{
+        guard webView != nil else {
+            return
+        }
+        
+        webView?.wkTakeSnapshot({ (img:UIImage?) in
+            if let _snapshot = snapshot{
+                _snapshot(img)
+            }
+        })
+    }
+    
     init(wk:WKWebView) {
         webView = wk
     }

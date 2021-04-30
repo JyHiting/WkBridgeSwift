@@ -8,7 +8,7 @@
 
 import UIKit
 import WebKit
-
+import SnapKit
 import WkBridgeSwift
 
 
@@ -29,6 +29,21 @@ class WebViewExample: UIViewController {
         //        wk.configuration.userContentController.add(self, name: "your_app_func")
         wkWebView = wk
         self.view = wkWebView
+        
+        let takeSnapshot = UIButton()
+        takeSnapshot.setTitle("截图", for: .normal)
+        takeSnapshot.addTarget(self, action: #selector(takeSnapshotClick), for: .touchUpInside)
+        takeSnapshot.backgroundColor = .lightGray
+        takeSnapshot.setTitleColor(.yellow, for: .normal)
+        
+        self.view.addSubview(takeSnapshot)
+        takeSnapshot.snp_makeConstraints { (make) in
+            make.left.equalToSuperview().offset(30)            
+            make.size.equalTo(CGSize(width: 120, height: 45))
+            make.top.equalToSuperview().offset(30)
+        }
+        
+        
     }
     
     override func viewDidLoad() {
@@ -59,21 +74,21 @@ class WebViewExample: UIViewController {
         }
         
         //MARK:-- post body丢失问题默认已经处理，该bridge会自动处理body丢失问题
-//        var req = URLRequest(url: URL(string: "http://10.68.252.191:3000/wkissues/postapi")!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 30)
-//        req.httpMethod = "post"
-//        let paras:[String:Any] = ["name":"jack","age":88]
-//        req.httpBody = try? JSONSerialization.data(withJSONObject: paras, options: [])
-//        wkWebView?.load(req)
+        //        var req = URLRequest(url: URL(string: "http://10.68.252.191:3000/wkissues/postapi")!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 30)
+        //        req.httpMethod = "post"
+        //        let paras:[String:Any] = ["name":"jack","age":88]
+        //        req.httpBody = try? JSONSerialization.data(withJSONObject: paras, options: [])
+        //        wkWebView?.load(req)
         
         //MARK:-- 加载普通url
-//        let req = URLRequest(url: URL(string: "https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form")!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 30)
-//        wkWebView?.load(req)
+        let req = URLRequest(url: URL(string: "https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/form")!, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 30)
+        wkWebView?.load(req)
         
         //MARK:-- 使用示例代码
-        let exampleHtml = URL(fileURLWithPath: Bundle.main.path(forResource: "example", ofType: "html")!)
-        wkWebView?.load(URLRequest(url: exampleHtml))
+        //        let exampleHtml = URL(fileURLWithPath: Bundle.main.path(forResource: "example", ofType: "html")!)
+        //        wkWebView?.load(URLRequest(url: exampleHtml))
         //iOS调用js挂载服务示例代码
-//        iOSCallJsFunc()
+        //        iOSCallJsFunc()
     }
     
     func iOSCallJsFunc() -> Void {
@@ -92,6 +107,13 @@ class WebViewExample: UIViewController {
                 print("\(res!)")
             })
         }
+    }
+    
+    //MARK:-- 截屏
+    @objc func takeSnapshotClick() -> Void {
+        bridge?.takeSnapshot({ (img) in
+            
+        })
     }
     
     override func didReceiveMemoryWarning() {
