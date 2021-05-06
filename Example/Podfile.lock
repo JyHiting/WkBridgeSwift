@@ -1,20 +1,23 @@
 PODS:
   - SnapKit (4.2.0)
-  - WkBridgeSwift (0.0.5)
+  - WkBridgeSwift (0.0.8)
 
 DEPENDENCIES:
   - SnapKit (~> 4.2.0)
-  - WkBridgeSwift
+  - WkBridgeSwift (from `../`)
 
 SPEC REPOS:
   trunk:
     - SnapKit
-    - WkBridgeSwift
+
+EXTERNAL SOURCES:
+  WkBridgeSwift:
+    :path: "../"
 
 SPEC CHECKSUMS:
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  WkBridgeSwift: 2200d8f95fc7f2287db6ddb14dbce7d454ce2769
+  WkBridgeSwift: 495fd123f3434c794b0f4d2f5fe1be6fe2e5f4d8
 
-PODFILE CHECKSUM: 0ec03117c1225c9a29c9629b0e912bf8f5bfa9f8
+PODFILE CHECKSUM: 0d53f908f55ca4bacc6d949139d159d96fcbd43f
 
 COCOAPODS: 1.10.1

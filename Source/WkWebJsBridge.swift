@@ -15,6 +15,7 @@ public class WkWebJsBridge: NSObject {
     
     public static func bridgeFor(webView:WKWebView) -> WkWebJsBridge {
         
+        WKWebView.wkWebHook()
         let webBridge = WkWebJsBridge(wk: webView)
         let injectJs = _JsBridgeInjectJs()
         let handlerProxy = WkWebHandlerProxy(scriptDelegate: webBridge)
@@ -76,6 +77,18 @@ public class WkWebJsBridge: NSObject {
         }
         jsStr += ")"
         _executeJsOnMain(js: jsStr)
+    }
+    
+    public func takeSnapshot(_ snapshot:((UIImage?)->())?)->Void{
+        guard webView != nil else {
+            return
+        }
+        
+        webView?.wkTakeSnapshot({ (img:UIImage?) in
+            if let _snapshot = snapshot{
+                _snapshot(img)
+            }
+        })
     }
     
     init(wk:WKWebView) {
