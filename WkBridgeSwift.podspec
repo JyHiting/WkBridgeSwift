@@ -1,10 +1,12 @@
 
 Pod::Spec.new do |s|
   s.name             = 'WkBridgeSwift'
-  s.version          = '0.0.6'
-  s.summary          = '简化wkwebview和前端通信交互的框架'
+  s.version          = '0.0.8'
+  s.summary          = '简化wkwebview和前端的通信交互，处理body丢失，提供截长图功能的一个轻量桥接框架'
   s.description      = <<-DESC
-  一个swift版本的简化wkwebview和前端通信交互的框架
+  简化wkwebview和前端的通信交互
+  帮助处理body丢失问题
+  提供截长图功能
                        DESC
   s.homepage         = 'https://github.com/JyHiting/WkBridgeSwift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

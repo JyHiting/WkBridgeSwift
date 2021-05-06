@@ -20,15 +20,15 @@ class WebViewExample: UIViewController {
     
     override func loadView() {
         
-        let config = WKWebViewConfiguration()
-        let wk = WKWebView(frame: .zero, configuration: config)
-        wk.uiDelegate = self
-        //处理自己老项目的逻辑和使用bridge之后的操作不干扰
-        //wk的循环引用问题大家都知道，自己项目可以继续使用configuration.userContentController.add挂载自己的方法
-        //自己项目原有的方式挂载的方法要自己控制内存泄漏的问题，通过bridge的方式注册的方法bridge自己控制
-        //        wk.configuration.userContentController.add(self, name: "your_app_func")
-        wkWebView = wk
-        self.view = wkWebView
+        self.view = UIView()
+        
+        let menus = UIView()
+        menus.backgroundColor = .yellow
+        self.view.addSubview(menus)
+        menus.snp_makeConstraints { (make) in
+            make.left.top.right.equalTo(self.view)
+            make.height.equalTo(60)
+        }
         
         let takeSnapshot = UIButton()
         takeSnapshot.setTitle("截图", for: .normal)
@@ -36,14 +36,28 @@ class WebViewExample: UIViewController {
         takeSnapshot.backgroundColor = .lightGray
         takeSnapshot.setTitleColor(.yellow, for: .normal)
         
-        self.view.addSubview(takeSnapshot)
+        menus.addSubview(takeSnapshot)
         takeSnapshot.snp_makeConstraints { (make) in
-            make.left.equalToSuperview().offset(30)            
+            make.left.equalToSuperview().offset(30)
             make.size.equalTo(CGSize(width: 120, height: 45))
-            make.top.equalToSuperview().offset(30)
+            make.centerY.equalTo(menus)
         }
         
+        let config = WKWebViewConfiguration()
+        let wk = WKWebView(frame: .zero, configuration: config)
+        wk.uiDelegate = self
+        //处理自己老项目的逻辑和使用bridge之后的操作不干扰
+        //wk的循环引用问题大家都知道，自己项目可以继续使用configuration.userContentController.add挂载自己的方法
+        //自己项目原有的方式挂载的方法要自己控制内存泄漏的问题，通过bridge的方式注册的方法bridge自己控制
+        //wk.configuration.userContentController.add(self, name: "your_app_func")
+        wkWebView = wk
+        self.view.addSubview(wk)
         
+        wk.snp_makeConstraints { (make) in
+            make.left.bottom.right.equalTo(self.view)
+            make.top.equalTo(menus.snp_bottom)
+        }
+
     }
     
     override func viewDidLoad() {
@@ -91,6 +105,7 @@ class WebViewExample: UIViewController {
         //        iOSCallJsFunc()
     }
     
+    //MARK:-- iOS调用js方法
     func iOSCallJsFunc() -> Void {
         DispatchQueue.global().asyncAfter(deadline: .now() + 3) {
             //调用js服务该服务不需要参数
