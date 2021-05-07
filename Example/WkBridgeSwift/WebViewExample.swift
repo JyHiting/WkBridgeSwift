@@ -99,10 +99,11 @@ class WebViewExample: UIViewController {
         wkWebView?.load(req)
         
         //MARK:-- 使用示例代码
-        //        let exampleHtml = URL(fileURLWithPath: Bundle.main.path(forResource: "example", ofType: "html")!)
-        //        wkWebView?.load(URLRequest(url: exampleHtml))
+//            let exampleHtml = URL(fileURLWithPath: Bundle.main.path(forResource: "example", ofType: "html")!)
+//            wkWebView?.load(URLRequest(url: exampleHtml))
         //iOS调用js挂载服务示例代码
         //        iOSCallJsFunc()
+        
     }
     
     //MARK:-- iOS调用js方法

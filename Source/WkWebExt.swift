@@ -68,6 +68,24 @@ extension WKWebView{
         return vc!
     }
     
+    private func renderCurrentPage(idx:Int,max:Int,content:CGContext,frame:CGRect,height:CGFloat,finished:@escaping ()->())->Void{
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.03) {
+            
+            var myFrame = frame
+            myFrame.origin.y = -(CGFloat((idx))*height);
+            let currentFrame = myFrame
+            self.frame = currentFrame
+            self.layer.render(in: content)
+            if idx < max{
+                let nextIdx = idx + 1
+                self.renderCurrentPage(idx: nextIdx, max: max, content: content, frame: frame, height: height, finished: finished)
+            }else{
+                finished()
+            }
+        }
+    }
+    
     func wkTakeSnapshot(_ snapshot:((UIImage?)->())?) -> Void {
         
         DispatchQueue.main.async { [self] in
@@ -96,37 +114,24 @@ extension WKWebView{
             UIGraphicsBeginImageContextWithOptions(contentSize, true, UIScreen.main.scale)
             let content = UIGraphicsGetCurrentContext()
             
-            var curIdx = 0
-            var myFrame = CGRect(origin: .zero, size: contentSize);
+            let curIdx = 0
+            let myFrame = CGRect(origin: .zero, size: contentSize);
             self.scrollView.contentOffset = .zero
-            repeat{
-                
-                myFrame.origin.y = -(CGFloat((curIdx))*_height);
-                let currentFrame = myFrame
-                OperationQueue.main.addOperation {
-                    self.frame = currentFrame
-                    self.layer.render(in: content!)
-                }
-                curIdx += 1
-            }while(curIdx < screenCount)
             
-            OperationQueue.main.addOperation {
+            renderCurrentPage(idx: curIdx, max: screenCount, content: content!, frame: myFrame, height: _height) {
                 
                 let snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
                 UIGraphicsEndImageContext();
+                
                 self.frame = oldFrame;
                 self.scrollView.contentOffset = oldOffset;
                 self.translatesAutoresizingMaskIntoConstraints = !self.translatesAutoresizingMaskIntoConstraints
                 NSLayoutConstraint.activate(superConstraints)
                 
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-                    
-                    mask.removeFromSuperview()
-                    if let _snapshot = snapshot{
-                        _snapshot(snapshotImage)
-                    }
+                mask.removeFromSuperview()
+                if let _snapshot = snapshot{
+                    _snapshot(snapshotImage)
                 }
-                
             }
         }
     }
