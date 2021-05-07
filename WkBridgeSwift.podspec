@@ -16,5 +16,4 @@ Pod::Spec.new do |s|
   s.source_files = 'Source/*.swift'
   s.swift_versions = ['5.1', '5.2', '5.3']
   s.frameworks = 'WebKit'
-  
 end

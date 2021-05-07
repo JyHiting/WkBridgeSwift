@@ -7,6 +7,7 @@
 
 import WebKit
 
+
 extension WKWebView{
     
     class func wkWebHook() -> Void {
@@ -53,53 +54,71 @@ extension WKWebView{
         }
         return wk_load(request)
     }
+    
+    private func currentViewController() -> UIViewController {
+        
+        var vc = UIApplication.shared.keyWindow?.rootViewController
+        if (vc?.isKind(of: UITabBarController.self))! {
+            vc = (vc as! UITabBarController).selectedViewController
+        }else if (vc?.isKind(of: UINavigationController.self))!{
+            vc = (vc as! UINavigationController).visibleViewController
+        }else if ((vc?.presentedViewController) != nil){
+            vc =  vc?.presentedViewController
+        }
+        return vc!
+    }
+    
     func wkTakeSnapshot(_ snapshot:((UIImage?)->())?) -> Void {
         
         DispatchQueue.main.async { [self] in
-
-            let mask = self.snapshotView(afterScreenUpdates: false)!
-            mask.frame = CGRect(x: self.frame.origin.x, y: self.frame.origin.y, width: mask.bounds.size.width, height: mask.bounds.size.height)
+            
+            let vc = currentViewController()
+            let mask = vc.view.snapshotView(afterScreenUpdates: true)!
+            mask.frame = CGRect(x: mask.frame.origin.x, y: mask.frame.origin.y, width: mask.frame.size.width, height: mask.frame.size.height)
             guard let _superview = self.superview else {
                 return
             }
             _superview.addSubview(mask)
-                        
+            
             let oldFrame = self.frame
             let oldOffset = self.scrollView.contentOffset
             let contentSize = self.scrollView.contentSize
-            let screenCount = Int(ceilf(Float(contentSize.height/self.scrollView.bounds.size.height)))
-
-            self.frame = CGRect(origin: .zero, size: contentSize)
-            self.scrollView.contentOffset = .zero
-
+            
+            self.translatesAutoresizingMaskIntoConstraints = !self.translatesAutoresizingMaskIntoConstraints
+            
+            let superConstraints = _superview.constraints
+            NSLayoutConstraint.deactivate(superConstraints)
+            
+            
+            let _height = self.scrollView.bounds.size.height
+            let screenCount = Int(ceilf(Float(contentSize.height/_height)))
+            
             UIGraphicsBeginImageContextWithOptions(contentSize, true, UIScreen.main.scale)
             let content = UIGraphicsGetCurrentContext()
             
-                
             var curIdx = 0
-            let _height = _superview.bounds.size.height
-            
+            var myFrame = CGRect(origin: .zero, size: contentSize);
+            self.scrollView.contentOffset = .zero
             repeat{
-
-                let pageIdx = curIdx
+                
+                myFrame.origin.y = -(CGFloat((curIdx))*_height);
+                let currentFrame = myFrame
                 OperationQueue.main.addOperation {
-
-                    var myFrame = self.frame;
-                    myFrame.origin.y = -(CGFloat((pageIdx))*_height);
-                    self.frame = myFrame;
+                    self.frame = currentFrame
                     self.layer.render(in: content!)
                 }
-
                 curIdx += 1
-
             }while(curIdx < screenCount)
-
+            
             OperationQueue.main.addOperation {
-
+                
                 let snapshotImage = UIGraphicsGetImageFromCurrentImageContext();
                 UIGraphicsEndImageContext();
                 self.frame = oldFrame;
                 self.scrollView.contentOffset = oldOffset;
+                self.translatesAutoresizingMaskIntoConstraints = !self.translatesAutoresizingMaskIntoConstraints
+                NSLayoutConstraint.activate(superConstraints)
+                
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
                     
                     mask.removeFromSuperview()
@@ -107,7 +126,7 @@ extension WKWebView{
                         _snapshot(snapshotImage)
                     }
                 }
-  
+                
             }
         }
     }
