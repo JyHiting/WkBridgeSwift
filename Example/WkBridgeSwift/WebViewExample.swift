@@ -20,6 +20,7 @@ class WebViewExample: UIViewController {
     
     override func loadView() {
         
+                
         self.view = UIView()
         self.view.backgroundColor = .brown
         let menus = UIView()

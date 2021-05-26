@@ -127,10 +127,12 @@ extension WKWebView{
                 self.scrollView.contentOffset = oldOffset;
                 self.translatesAutoresizingMaskIntoConstraints = !self.translatesAutoresizingMaskIntoConstraints
                 NSLayoutConstraint.activate(superConstraints)
-                
-                mask.removeFromSuperview()
-                if let _snapshot = snapshot{
-                    _snapshot(snapshotImage)
+            
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                    mask.removeFromSuperview()
+                    if let _snapshot = snapshot{
+                        _snapshot(snapshotImage)
+                    }
                 }
             }
         }
